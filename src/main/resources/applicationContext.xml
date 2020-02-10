@@ -26,4 +26,6 @@
         <constructor-arg name="userDao" ref="userDao1"></constructor-arg>
     </bean>
     <bean id="userDao1" class="com.soft.dao.UserDaoImpl"></bean>
+
+    <import resource="applicationContext1.xml"></import>
 </beans>
