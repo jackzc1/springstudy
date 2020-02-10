@@ -48,4 +48,14 @@
             </list>
         </property>
     </bean>
+
+    <bean id="e3" class="com.soft.entity.E3">
+        <property name="map">
+            <map>
+                <entry key="aaa" value="张三"></entry>
+                <entry key="bbb" value="王二"></entry>
+                <entry key="ccc" value="刘备"></entry>
+            </map>
+        </property>
+    </bean>
 </beans>

@@ -3,6 +3,7 @@ package com.soft.test;
 import com.soft.dao.UserDao;
 import com.soft.entity.E1;
 import com.soft.entity.E2;
+import com.soft.entity.E3;
 import com.soft.service.UserService;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -56,6 +57,14 @@ public class Demo2 {
     public void test6() {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
         E2 e1 = (E2) applicationContext.getBean("e2");
+        System.out.println(e1);
+    }
+
+    //map的注入
+    @Test
+    public void test7() {
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+        E3 e1 = (E3) applicationContext.getBean("e3");
         System.out.println(e1);
     }
 }
