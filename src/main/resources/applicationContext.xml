@@ -5,6 +5,13 @@
         http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <!--实例化bean的三种方法，第一种 普通-->
     <bean id="userService" class="com.soft.service.UserServiceImpl"></bean>
 
+    <!--第二种 静态工厂-->
+    <bean id="userService1" class="com.soft.service.SFactory" factory-method="getUserService"></bean>
+
+    <!--第三种 动态工厂-->
+    <bean id="dFactory" class="com.soft.service.DFactory"></bean>
+    <bean id="userService2" factory-bean="dFactory" factory-method="getUserService"></bean>
 </beans>
