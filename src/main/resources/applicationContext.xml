@@ -28,4 +28,14 @@
     <bean id="userDao1" class="com.soft.dao.UserDaoImpl"></bean>
 
     <import resource="applicationContext1.xml"></import>
+
+    <bean id="e1" class="com.soft.entity.E1">
+        <property name="ids">
+            <array>
+                <value>12</value>
+                <value>13</value>
+                <value>14</value>
+            </array>
+        </property>
+    </bean>
 </beans>

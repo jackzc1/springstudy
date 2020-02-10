@@ -1,6 +1,7 @@
 package com.soft.test;
 
 import com.soft.dao.UserDao;
+import com.soft.entity.E1;
 import com.soft.service.UserService;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -39,5 +40,13 @@ public class Demo2 {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml","applicationContext1.xml");
         UserDao userDao2 = (UserDao) applicationContext.getBean("userDao2");
         userDao2.findById(1);
+    }
+
+    //数组的注入
+    @Test
+    public void test5() {
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+        E1 e1 = (E1) applicationContext.getBean("e1");
+        System.out.println(e1);
     }
 }
