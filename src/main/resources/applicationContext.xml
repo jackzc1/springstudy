@@ -14,4 +14,10 @@
     <!--第三种 动态工厂-->
     <bean id="dFactory" class="com.soft.service.DFactory"></bean>
     <bean id="userService2" factory-bean="dFactory" factory-method="getUserService"></bean>
+
+    <!--set方法注入-->
+    <bean id="userService3" class="com.soft.service.UserServiceImpl1">
+        <property name="userDao" ref="userDao"></property>
+    </bean>
+    <bean id="userDao" class="com.soft.dao.UserDaoImpl"></bean>
 </beans>
