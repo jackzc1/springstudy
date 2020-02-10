@@ -20,4 +20,10 @@
         <property name="userDao" ref="userDao"></property>
     </bean>
     <bean id="userDao" class="com.soft.dao.UserDaoImpl"></bean>
+
+    <!--构造方法注入-->
+    <bean id="userService4" class="com.soft.service.UserServiceImpl2">
+        <constructor-arg name="userDao" ref="userDao1"></constructor-arg>
+    </bean>
+    <bean id="userDao1" class="com.soft.dao.UserDaoImpl"></bean>
 </beans>
