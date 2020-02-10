@@ -38,4 +38,14 @@
             </array>
         </property>
     </bean>
+
+    <bean id="e2" class="com.soft.entity.E2">
+        <property name="list">
+            <list>
+                <value>张三</value>
+                <value>李四</value>
+                <value>王二麻子</value>
+            </list>
+        </property>
+    </bean>
 </beans>
