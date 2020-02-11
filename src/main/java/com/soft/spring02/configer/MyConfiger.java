@@ -4,6 +4,7 @@ import com.alibaba.druid.pool.DruidDataSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 import javax.sql.DataSource;
 
@@ -12,6 +13,7 @@ import javax.sql.DataSource;
  */
 @Configuration
 @ComponentScan(value = "com.soft.spring02")
+@EnableAspectJAutoProxy
 public class MyConfiger {
 
     @Bean
